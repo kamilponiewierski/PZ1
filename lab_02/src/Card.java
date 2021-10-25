@@ -1,5 +1,9 @@
 import java.util.Objects;
 
+/**
+ * Represents a playing card
+ *
+ */
 public class Card implements Comparable
 {
     private final Suit _suit;
@@ -12,11 +16,19 @@ public class Card implements Comparable
         _rank = rank;
     }
 
+    /**
+     * @return rank of a card
+     * @see Rank
+     */
     public Rank get_rank()
     {
         return _rank;
     }
 
+    /**
+     * @return suit of a card
+     * @see Suit
+     */
     public Suit get_suit()
     {
         return _suit;
@@ -56,11 +68,21 @@ public class Card implements Comparable
     }
 }
 
+/**
+ * Suit of a card
+ *
+ * @see Card
+ */
 enum Suit
 {
     hearts, spades, diamonds, clubs
 }
 
+/**
+ * Rank of a card
+ *
+ * @see Card
+ */
 enum Rank
 {
     two, three, four, five, six, seven, eight, nine, ten, jack, queen, king, ace,

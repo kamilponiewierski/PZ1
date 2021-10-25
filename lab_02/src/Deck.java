@@ -3,10 +3,18 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Represent a playing deck
+ *
+ * @see Card
+ */
 public class Deck
 {
     Card[] _cards;
 
+    /**
+     * Creates a sorted deck of 52 standard cards.
+     */
     Deck()
     {
         var builder = new LinkedList<Card>();
@@ -25,11 +33,20 @@ public class Deck
         _cards = arr;
     }
 
+    /**
+     * Shuffles the deck, changing the order of the cards
+     */
     void shuffle()
     {
         _cards = shuffle(_cards);
     }
 
+    /**
+     * Shuffles the [cards] returning a copy which order has been changed
+     *
+     * @param cards array of cards to be shuffled
+     * @return copy of cards which order has been changed
+     */
     Card[] shuffle(Card[] cards)
     {
         var copy = new LinkedList<Card>(List.of(cards));
@@ -42,6 +59,9 @@ public class Deck
         return arr;
     }
 
+    /**
+     * @return top card of the deck, removing it from it
+     */
     Card getTopCard()
     {
         var card = _cards[0];
