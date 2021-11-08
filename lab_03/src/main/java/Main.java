@@ -1,3 +1,5 @@
+import pl.edu.agh.kis.CryptUtil;
+
 public class Main
 {
 
@@ -24,6 +26,7 @@ public class Main
             System.out.println();
         }
 
+        System.out.println(CryptUtil.generateSHA512("42"));
     }
 
 
